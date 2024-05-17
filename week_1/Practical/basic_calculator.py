@@ -37,9 +37,10 @@ def average(list_of_num):
         are_num = True
         total = 0
         for index in list_of_num:
-            total += index
             if not isinstance(index, int):
                 are_num = False
+            else:
+                total += index
         if are_num == True:
             total /= len(list_of_num)
             return total
@@ -47,3 +48,17 @@ def average(list_of_num):
             print('Please only use numbers in the list')
     else:
         print('Please enter a list of numbers')
+
+# average() testing
+
+# l1 = [17, 32, 63, 45]
+# h = average(l1)
+# print(h)
+
+# l1 = ['k', 32, 63, 45, 5]
+# h = average(l1)
+# print(h)
+
+# l1 = 'k'
+# h = average(l1)
+# print(h)
