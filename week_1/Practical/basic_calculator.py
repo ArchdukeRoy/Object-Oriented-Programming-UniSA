@@ -15,16 +15,35 @@ Create three functions with different uses.
 
 
 def square_number(num):
-    squared = num * num
-    return num
+    if isinstance(num, int):
+        squared = num * num
+        return num
+    else:
+        print('Please enter an interger')
 
 
 def odd_even(num):
-    if (num % 2) == 0:
-        print(num, 'is even')
+    if isinstance(num, int):
+        if (num % 2) == 0:
+            print(num, 'is even')
+        else:
+            print(num, 'is odd')
     else:
-        print(num, 'is odd')
+        print('Please enter an interger')
 
 
-def average(num):
-    pass
+def average(list_of_num):
+    if isinstance(list_of_num, list):
+        are_num = True
+        total = 0
+        for index in list_of_num:
+            total += index
+            if not isinstance(index, int):
+                are_num = False
+        if are_num == True:
+            total /= len(list_of_num)
+            return total
+        else:
+            print('Please only use numbers in the list')
+    else:
+        print('Please enter a list of numbers')
