@@ -15,8 +15,14 @@ below.
 """
 
 
-def choose_ward(file_path):
-    pass
+def choose_word_list(file_path):
+    # opening a txt file and setting it to a variable to be modified
+    # splitting the txt file's line into a list (seperated by ', ')
+    with open(file_path, "r") as file:
+        word_list = file.read()
+    word_list = word_list.lower()
+    word_list = word_list.split(", ")
+    return word_list
 
 
 def display_word():
@@ -25,3 +31,10 @@ def display_word():
 
 def play_game():
     pass
+
+
+# pokemon_txt = 'week_1\Workshop\pokemon.txt'
+# pokemon_list = choose_words(pokemon_txt)
+# print(pokemon_list)
+
+# print(len(pokemon_list))
