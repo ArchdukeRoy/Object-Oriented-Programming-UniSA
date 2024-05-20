@@ -10,4 +10,8 @@ simple, we can start this at 1.
 """
 
 
-class Bike():
+class Bike:
+    def __init__(self, type, max_gears):
+        self.__type = type
+        self.__max_gears = max_gears
+        self.__current_gear = 1
