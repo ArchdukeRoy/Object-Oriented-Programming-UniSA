@@ -16,12 +16,20 @@ class Cylist:
         self.__age = age
         self.__weight = weight
         self.__proficiency_type = proficiency_type
+        self.__protective_gear = False
 
     def acceleerate(self):
-        pass
+        print(self.__name, 'is accelerating')
 
     def turn(self, direction):
-        pass
+        print(self.__name, 'is turning', direction)
 
-    def change_gear(self):
-        pass
+    def brakes(self):
+        print('Braking')
+
+    def change_protective_gear(self):
+        self.__protective_gear = not self.__protective_gear
+        if self.__protective_gear:
+            print('Protective gear has been put on')
+        else:
+            print('Protective gear has been taken off')
