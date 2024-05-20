@@ -15,3 +15,14 @@ class Bike:
         self.__type = type
         self.__max_gears = max_gears
         self.__current_gear = 1
+
+    # takes a boolean as a parameter to change gears
+    def change_gears(self, change):
+        if change and self.__current_gear != self.__max_gears:
+            self.__current_gear += 1
+            print('gear has increased to', self.__current_gear)
+        elif not change and self.__current_gear != 1:
+            self.__current_gear -= 1
+            print('gear has decreased to', self.__current_gear)
+        else:
+            print('gear has not been changed')
