@@ -31,3 +31,19 @@ class Snake:
     # TODO complete print statement
     def coil(self):
         pass
+
+
+class Cat:
+    def __init__(self, name, nickname, cry, explored_locations):
+        self.__name = name
+        self.__nickname = nickname
+        self.__cry = cry
+        self.__explored_locations = explored_locations
+
+    # TODO complete print statement
+    def cry(self):
+        pass
+
+    # TODO complete print statement
+    def explore(self, location):
+        pass
