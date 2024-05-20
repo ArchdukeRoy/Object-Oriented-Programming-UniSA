@@ -25,8 +25,9 @@ def choose_word_list(file_path):
     return word_list
 
 
-def display_word():
-    pass
+def display_word(word, guessed_letters):
+    word_len = len(word)
+    word_len
 
 
 def play_game():
