@@ -47,3 +47,21 @@ class Cat:
     # TODO complete print statement
     def explore(self, location):
         pass
+
+
+class Sheep:
+    def __init__(self, name, nickname, cry):
+        self.__name = name
+        self.__nickname = nickname
+        self.__cry = cry
+        self.__min_hunger = 0
+        self.__max_hunger = 100
+        self.__current_hunger = 50
+
+    # TODO complete print statement
+    def cry(self):
+        pass
+
+    # TODO complete print statement
+    def eat(self, food):
+        pass
