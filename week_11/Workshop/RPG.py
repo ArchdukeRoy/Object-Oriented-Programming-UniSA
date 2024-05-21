@@ -45,10 +45,36 @@ class Rogue:
             return self.__damage
     
 class BattleMage(Mage,Warrior):
-    pass
+    def __init__(self,magic_attribute,strength):
+        Mage.__init__(self,magic_attribute)
+        Warrior.__init__(self,strength)
+           
+    def attack(self):
+        return Mage.attack(self)+Warrior.attack(self)
+        
 
 class BladeMaster(Warrior,Rogue):
-    pass
+    def __init__(self,strength):
+        Warrior.__init__(self, strength)
+        Rogue.__init__(self)
+    
+    def attack(self):
+        return Warrior.attack(self)+Rogue.attack(self)
 
 class ShadowCaster(Mage,Rogue):
-    pass
+    def __init__(self,magic_attribute):
+        Mage.__init__(self,magic_attribute)
+        Rogue.__init__(self)
+        
+    def attack(self):
+        return Mage.attack(self)+Rogue.attack(self) 
+    
+#TEST CODE   
+# shadow_caster=ShadowCaster(10)   
+# print("ShadowCaster:", shadow_caster.attack())
+
+# blade_master = BladeMaster(20)
+# print("BladeMaster:", blade_master.attack())
+
+# battle_mage = BattleMage(10, 20)   
+# print("BattleMage", battle_mage.attack())
