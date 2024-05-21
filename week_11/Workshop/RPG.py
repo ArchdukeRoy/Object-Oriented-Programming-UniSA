@@ -11,6 +11,7 @@ BattleMage
 BladeMaster
 ShadowCaster
 """
+import random
 
 class Mage:
     def __init__(self, magic_attribute):
@@ -18,7 +19,8 @@ class Mage:
         self.__magic_attribute = magic_attribute
         
     def attack(self):
-        pass
+        damage = self.__damage * (self.__magic_attribute/10)
+        return damage
     
 class Warrior:
     def __init__(self, strength):
@@ -26,7 +28,8 @@ class Warrior:
         self.__strength = strength
    
     def attack(self):
-        pass
+        damage = self.__damage + self.__strength
+        return damage
     
 class Rogue:
     def __init__(self):
@@ -34,7 +37,12 @@ class Rogue:
         self.__crit = 10
 
     def attack(self):      
-        pass
+        crit_check = random.randint(1, 100)
+        if crit_check <= self.__crit:
+            damage = self.__damage**2
+            return damage
+        else:
+            return self.__damage
     
 class BattleMage(Mage,Warrior):
     pass
